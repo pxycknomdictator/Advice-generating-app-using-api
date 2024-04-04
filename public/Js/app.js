@@ -25,4 +25,5 @@ dice.addEventListener("click", (event) => {
     }
 })
 
+callMe()
 
