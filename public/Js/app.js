@@ -10,7 +10,7 @@ const callMe = async () => {
         const data = await fetch(url);
         const response = await data.json();
         adviceNumber.innerText = `#${response.slip.id}`;
-        adviceText.innerText = `"${response.slip.advice}"`
+        adviceText.innerText = `“${response.slip.advice}”`
     } catch (error) {
         console.log(error);
     }
@@ -26,4 +26,7 @@ dice.addEventListener("click", (event) => {
 })
 
 callMe()
+
+
+
 
