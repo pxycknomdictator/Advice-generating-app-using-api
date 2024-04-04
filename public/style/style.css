@@ -1,0 +1,126 @@
+/* Css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utilities Classes */
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+/* variables */
+
+:root {
+
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+/*-Main Css */
+
+html,
+body {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    background: var(--DarkBlue);
+}
+
+.advice-box {
+    background: var(--DarkGrayishBlue);
+    position: relative;
+    width: 500px;
+    padding: 4rem;
+    border-radius: 17px;
+}
+
+.advice {
+    color: var(--NeonGreen);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+#advice-number {
+    margin-left: 3px;
+    letter-spacing: 2px;
+}
+
+.advice-text {
+    color: var(--LightCyan);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.divider {
+    width: 100%;
+    margin-block: 40px;
+}
+
+.dice-box {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--NeonGreen);
+    width: 55px;
+    height: 55px;
+    bottom: -28px;
+    transition: box-shadow .1s ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 0px 25px var(--NeonGreen);
+    }
+}
+
+
+@media (max-width: 550px) {
+    html {
+        font-size: 8.5px;
+    }
+
+    .advice-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .dice-box {
+        margin-bottom: 50px;
+    }
+}
